@@ -1,0 +1,18 @@
+<div *ngIf="interpretManager.curFile != null">
+    <div class="btn-group row" role="group" aria-label="...">
+        <button type="button" class="btn btn-default" (click)="run()">
+            Run
+            <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+        </button>
+        <button *ngIf="interpretManager.debug" type="button" class="btn btn-default" (click)="step()">
+            Step
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        </button>
+    </div>
+    <div class="row">
+        <textarea rows="12" cols="100" placeholder="source code" [(ngModel)]="interpretManager.curFile.Content" disabled="{{interpretManager.debug}}"></textarea>
+    </div>
+</div>
+<div *ngIf="interpretManager.curFile == null">
+    <textarea rows="12" cols="100" placeholder="source code" disabled></textarea>
+</div>

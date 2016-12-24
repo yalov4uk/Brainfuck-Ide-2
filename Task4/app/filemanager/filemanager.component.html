@@ -1,0 +1,37 @@
+<div class="dropdown">
+    <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" href="#" (click)="getFiles()">
+        File <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+        <li><a href="#" (click)="create()">Create</a></li>
+        <li *ngIf="interpretManager.curFile != null"><a href="#" (click)="save()">Save</a></li>
+        <li *ngIf="interpretManager.curFile == null" class="disabled"><a href="#" (click)="save()">Save</a></li>
+        <li class="divider"></li>
+        <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">Open ...</a>
+            <ul class="dropdown-menu">
+                <li *ngFor="let usfile of curUserFiles"><a href="#" (click)="open(usfile.Id)">{{usfile.Name}}</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+<div class="panel" *ngIf="files.length != 0">
+    <h2>Files</h2>
+    <div class="list-group" *ngFor="let file of files">
+        <table>
+            <tr>
+                <td>
+                    <a href="#" *ngIf="file == interpretManager.curFile" class="list-group-item active" (click)="choose(file)"> {{file.Name}}</a>
+                    <a href="#" *ngIf="file != interpretManager.curFile" class="list-group-item" (click)="choose(file)"> {{file.Name}}</a>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-default" aria-label="Left Align" (click)="close(file)">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

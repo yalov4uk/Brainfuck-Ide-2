@@ -1,0 +1,16 @@
+<div *ngIf="interpretManager.debug">
+    <label>Current element</label>
+    <table>
+        <tr>
+            <td>
+                [<input size="1" [(ngModel)]="interpretManager.memoryPointerAttr">] =
+                <input size="1" [(ngModel)]="interpretManager.memoryCell">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Content pointer = <input size="1" [(ngModel)]="interpretManager.contentPointer" disabled>
+            </td>
+        </tr>
+    </table>
+</div>
