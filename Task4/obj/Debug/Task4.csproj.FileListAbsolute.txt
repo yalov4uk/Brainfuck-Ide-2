@@ -95,3 +95,9 @@ C:\Codes\Task4\Task4\obj\Debug\Task4.csprojResolveAssemblyReference.cache
 C:\Codes\Task4\Task4\obj\Debug\Task4.dll
 C:\Codes\Task4\Task4\obj\Debug\Task4.pdb
 C:\Codes\Task4\Task4\bin\Duke.Owin.VkontakteMiddleware.dll
+C:\Codes\Task4\Task4\bin\SendGrid.CSharp.HTTP.Client.dll
+C:\Codes\Task4\Task4\bin\SendGrid.dll
+C:\Codes\Task4\Task4\bin\System.Net.Http.Formatting.dll
+C:\Codes\Task4\Task4\bin\System.Net.Http.Formatting.xml
+C:\Codes\Task4\Task4\bin\SendGrid.SmtpApi.dll
+C:\Codes\Task4\Task4\bin\SendGridMail.dll

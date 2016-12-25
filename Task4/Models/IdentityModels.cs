@@ -39,11 +39,11 @@ namespace Task4.Models
         }
     }
 
-    public class DbInitializer : CreateDatabaseIfNotExists<ApplicationDbContext>
+    public class DbInitializer : DropCreateDatabaseAlways<ApplicationDbContext>
     {
         protected override void Seed(ApplicationDbContext context)
         {
-            ApplicationUserManager userManager = new ApplicationUserManager(new UserStore<ApplicationUser>(context));
+            /*ApplicationUserManager userManager = new ApplicationUserManager(new UserStore<ApplicationUser>(context));
             ApplicationUser user = new ApplicationUser() { UserName = "valera.yalow4uk@mail.ru", Email = "valera.yalow4uk@mail.ru" };
             userManager.Create(user, "valera.1zZ");
             context.Files.AddRange(new List<FileModel>()
@@ -60,7 +60,7 @@ namespace Task4.Models
                     Content = "+++++++++++>+>>>>++++++++++++++++++++++++++++++++++++++++++++>++++++++++++++++++++++++++++++++<<<<<<[>[>>>>>>+>+<<<<<<<-]>>>>>>>[<<<<<<<+>>>>>>>-]<[>++++++++++[-<-[>>+>+<<<-]>>>[<<<+>>>-]+<[>[-]<[-]]>[<<[>>>+<<<-]>>[-]]<<]>>>[>>+>+<<<-]>>>[<<<+>>>-]+<[>[-]<[-]]>[<<+>>[-]]<<<<<<<]>>>>>[++++++++++++++++++++++++++++++++++++++++++++++++.[-]]++++++++++<[->-<]>++++++++++++++++++++++++++++++++++++++++++++++++.[-]<<<<<<<<<<<<[>>>+>+<<<<-]>>>>[<<<<+>>>>-]<-[>>.>.<<<[-]]<<[>>+>+<<<-]>>>[<<<+>>>-]<<[<+>-]>[<+>-]<<<-]",
                     UserId = user.Id
                 }
-            });
+            });*/
             base.Seed(context);
         }
     }
